@@ -59,7 +59,7 @@ const JoinForm = () => {
 
   const interests = [
     "AI Automation", "Vibe Coding", "Design", "Media Editing",
-    "Marketing", "Networking", "Learning", "Everything"
+    "Marketing", "Networking", "Wealth", "Stocks", "Everything"
   ];
 
   return (
@@ -73,7 +73,7 @@ const JoinForm = () => {
               Fill in your details and you'll be redirected straight into the Artificial Studio WhatsApp community. Free. Instant. No gatekeeping.
             </p>
             <div className="form-perks">
-              {["Immediate access to all 9 groups", "Daily curated AI knowledge drops", "Direct access to builders, founders", "First access to new platforms", "Collaborative project opportunities", "Zero cost. Always free."].map((p, i) => (
+              {["Immediate access to all 10 groups", "Daily curated AI knowledge drops", "Direct access to builders, founders", "First access to new platforms", "Collaborative project opportunities", "Zero cost. Always free."].map((p, i) => (
                 <div key={i} className="perk"><div className="perk-dot"></div>{p}</div>
               ))}
             </div>
