@@ -18,6 +18,60 @@ export default function AdminDashboard({ users }: { users: UserRow[] }) {
   const [query, setQuery] = useState('')
   const [sortKey, setSortKey] = useState<SortKey>('createdAt')
   const [sortDir, setSortDir] = useState<SortDir>('desc')
+  
+  // ── Authentication ──
+  const [passcode, setPasscode] = useState('')
+  const [isAuthenticated, setIsAuthenticated] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return sessionStorage.getItem('as_admin_auth') === 'true'
+    }
+    return false
+  })
+  const [error, setError] = useState(false)
+
+  const handleLogin = (e: React.FormEvent) => {
+    e.preventDefault()
+    if (passcode === 'art777') {
+      setIsAuthenticated(true)
+      sessionStorage.setItem('as_admin_auth', 'true')
+      setError(false)
+    } else {
+      setError(true)
+      setPasscode('')
+    }
+  }
+
+  if (!isAuthenticated) {
+    return (
+      <div style={styles.loginRoot}>
+        <div style={styles.loginCard}>
+          <div style={styles.navLogo}>ARTIFICIAL STUDIO</div>
+          <p style={styles.loginSub}>// RESTRICTED ACCESS</p>
+          
+          <form style={styles.loginForm} onSubmit={handleLogin}>
+            <input
+              autoFocus
+              style={{
+                ...styles.searchInput,
+                width: '100%',
+                textAlign: 'center',
+                fontSize: 14,
+                borderColor: error ? '#ff4d4d' : 'rgba(255,255,255,0.18)'
+              }}
+              type="password"
+              placeholder="ENTER ACCESS KEY"
+              value={passcode}
+              onChange={(e) => setPasscode(e.target.value)}
+            />
+            {error && <p style={styles.errorText}>Invalid passcode. Access denied.</p>}
+            <button style={{ ...styles.exportBtn, width: '100%', marginTop: 20 }}>
+              Unlock Dashboard
+            </button>
+          </form>
+        </div>
+      </div>
+    )
+  }
 
   // ── Search filter ──
   const filtered = useMemo(() => {
@@ -275,11 +329,42 @@ const disp = "'Bebas Neue', Impact, sans-serif"
 
 const styles: Record<string, React.CSSProperties> = {
   root: {
-    minHeight: '100vh',
-    backgroundColor: '#000',
-    color: '#fff',
-    fontFamily: cond,
     fontSize: 14,
+  },
+
+  // LOGIN SCREEN
+  loginRoot: {
+    minHeight: '100vh',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#000',
+    padding: 20,
+  },
+  loginCard: {
+    width: '100%',
+    maxWidth: 320,
+    textAlign: 'center' as const,
+  },
+  loginSub: {
+    fontFamily: mono,
+    fontSize: 9,
+    letterSpacing: 2,
+    color: 'rgba(255,255,255,0.3)',
+    marginTop: 8,
+    marginBottom: 40,
+  },
+  loginForm: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+  },
+  errorText: {
+    color: '#ff4d4d',
+    fontFamily: mono,
+    fontSize: 9,
+    marginTop: 12,
+    letterSpacing: 1,
   },
 
   // NAV

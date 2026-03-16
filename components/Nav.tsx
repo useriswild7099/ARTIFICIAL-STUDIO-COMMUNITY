@@ -34,6 +34,7 @@ const Nav = () => {
           <a href="#about" className="nav-link">About</a>
           <a href="#groups" className="nav-link">Groups</a>
           <a href="#join" className="nav-link">Join</a>
+          <a href="/admin" className="nav-link">Admin</a>
           <a href="#join" className="nav-cta">Join Free</a>
         </div>
       </div>
