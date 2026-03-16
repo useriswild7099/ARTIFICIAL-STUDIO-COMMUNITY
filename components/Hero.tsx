@@ -207,14 +207,23 @@ const Hero = () => {
         .scroll-hint::after { content:''; display:block; width:1px; height:24px; background:rgba(255,255,255,0.25); }
 
         @media (max-width: 900px) {
-          .hero { padding: 120px 0 72px; }
-          .hero-h1 { font-size: 58px; }
-          .hero-stats { max-width: 100%; }
+          .hero { padding: 100px 0 60px; }
+          .hero-h1 { font-size: clamp(48px, 12vw, 80px); }
+          .hero-sub { font-size: 14px; max-width: 100%; margin-top: 24px; padding-left: 14px; }
+          .hero-stats { max-width: 100%; margin-top: 56px; }
         }
         @media (max-width: 540px) {
-          .hero-h1 { font-size: 46px; }
+          .hero-h1 { font-size: clamp(40px, 14vw, 56px); }
           .hero-stats { flex-wrap: wrap; }
-          .hstat { min-width: 80px; }
+          .hstat { min-width: 45%; padding: 14px 10px; border-bottom: 1px solid rgba(255,255,255,0.14); }
+          .hstat:nth-child(2) { border-right: none; }
+          .hstat:nth-child(3) { border-bottom: none; }
+          .hstat:nth-child(4) { border-bottom: none; border-right: none; }
+          .hstat-n { font-size: 24px; }
+          .hstat-l { font-size: 6.5px; }
+
+          .hero-actions { flex-direction: column; align-items: stretch; gap: 12px; }
+          .btn-primary, .btn-ghost { text-align: center; }
         }
       `}</style>
     </section>

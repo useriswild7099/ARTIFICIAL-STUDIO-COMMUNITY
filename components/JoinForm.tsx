@@ -185,12 +185,17 @@ const JoinForm = () => {
         .form-note { margin-top: 14px; font-family: var(--M); font-size: 7.5px; letter-spacing: 2px; color: rgba(255,255,255,0.2); text-transform: uppercase; text-align: center; line-height: 1.6; }
 
         @media (max-width: 900px) {
-          .form-section { padding: 72px 24px; }
-          .form-layout { grid-template-columns: 1fr; gap: 48px; }
+          .form-section { padding: 80px 0; }
+          .form-layout { grid-template-columns: 1fr; gap: 56px; }
+          .sec-title { font-size: 48px; }
+          .form-desc { max-width: 100%; }
         }
         @media (max-width: 540px) {
-          .form-card { padding: 28px 22px 24px; }
-          .interests-grid { grid-template-columns: 1fr; }
+          .sec-title { font-size: 38px; }
+          .form-card { padding: 32px 20px 24px; }
+          .interests-grid { grid-template-columns: 1fr; gap: 8px; }
+          .form-perks { gap: 10px; }
+          .perk { font-size: 14px; }
         }
       `}</style>
     </section>

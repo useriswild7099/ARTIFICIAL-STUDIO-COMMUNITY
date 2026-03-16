@@ -189,11 +189,13 @@ export const AboutSection = () => {
           line-height: 1.55;
         }
         @media (max-width: 900px) {
-          section { padding: 72px 24px; }
-          .benefits-grid { grid-template-columns: 1fr 1fr; }
+          section { padding: 80px 0; }
+          .benefits-grid { grid-template-columns: 1fr 1fr; gap: 8px; background: transparent; border: none; }
+          .benefit { border: 1px solid rgba(255,255,255,0.12); }
         }
         @media (max-width: 540px) {
-          .benefits-grid { grid-template-columns: 1fr; }
+          .benefits-grid { grid-template-columns: 1fr; gap: 12px; }
+          .sec-title { font-size: 42px; }
         }
       `}</style>
     </section>
