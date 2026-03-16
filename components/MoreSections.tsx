@@ -32,7 +32,7 @@ export const GroupsSection = () => {
       </div>
 
       <style jsx>{`
-        .groups-section { padding: 100px 0; }
+        .groups-section { padding: 100px 0; overflow: hidden; }
         .groups-grid {
           display: grid;
           grid-template-columns: repeat(4, 1fr);
@@ -54,13 +54,12 @@ export const GroupsSection = () => {
         .group-desc { font-size: 10.5px; font-weight: 300; color: rgba(255,255,255,0.45); line-height: 1.5; }
         .group-tag { font-family: var(--M); font-size: 7px; letter-spacing: 2px; color: rgba(255,255,255,0.3); text-transform: uppercase; border: 1px solid rgba(255,255,255,0.15); padding: 3px 7px; align-self: flex-start; margin-top: 4px; }
         @media (max-width: 900px) {
-          .groups-section { padding: 80px 0; }
-          .groups-grid { grid-template-columns: 1fr 1fr; gap: 8px; background: transparent; border: none; }
-          .group-card { border: 1px solid rgba(255,255,255,0.12); }
+          .groups-section { padding: 60px 0; }
+          .groups-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
         }
         @media (max-width: 540px) {
-          .groups-grid { grid-template-columns: 1fr; gap: 12px; }
-          .sec-title { font-size: 42px; }
+          .groups-grid { grid-template-columns: 1fr; gap: 6px; }
+          .group-card { padding: 22px 18px; }
         }
       `}</style>
     </section>
@@ -98,11 +97,9 @@ export const ManifestoBlock = () => {
         .manifesto-body { font-size: 13px; font-weight: 300; color: rgba(255,255,255,0.6); line-height: 1.75; border-left: 1px solid rgba(255,255,255,0.2); padding-left: 20px; }
         .btn-primary { font-family: var(--M); font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--B); background: var(--W); border: none; padding: 16px 32px; cursor: pointer; text-decoration: none; display: inline-block; transition: opacity 0.2s, transform 0.2s; }
         @media (max-width: 900px) {
-          .manifesto-sec .wrap { flex-direction: column; gap: 40px; }
-          .manifesto-sec { padding: 80px 0; }
+          .manifesto-sec .wrap { flex-direction: column !important; gap: 40px !important; }
+          .manifesto-sec { padding: 60px 0; }
           .manifesto-right { width: 100%; }
-          .manifesto-quote { font-size: 36px; }
-          .manifesto-body { font-size: 14px; }
         }
       `}</style>
     </div>
@@ -123,7 +120,8 @@ export const Footer = () => {
         .footer-link { font-family: var(--M); font-size: 8px; letter-spacing: 2px; color: rgba(255,255,255,0.35); text-transform: uppercase; text-decoration: none; transition: color 0.2s; }
         .footer-link:hover { color: var(--W); }
         @media (max-width: 900px) {
-          footer { padding: 32px 24px; }
+          footer { padding: 28px 0; }
+          footer .wrap { flex-direction: column !important; gap: 12px !important; text-align: center; }
         }
       `}</style>
     </footer>

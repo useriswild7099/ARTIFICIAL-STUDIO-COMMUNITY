@@ -110,7 +110,7 @@ export const AboutSection = () => {
   ];
 
   return (
-    <section id="about" style={{ padding: '100px 48px' }}>
+    <section id="about" style={{ padding: '100px 0' }}>
       <div className="wrap">
         <div className="sec-label">What You Gain Inside</div>
         <h2 className="sec-title">The Full<br /><span className="inv">Spectrum</span></h2>
@@ -189,13 +189,13 @@ export const AboutSection = () => {
           line-height: 1.55;
         }
         @media (max-width: 900px) {
-          section { padding: 80px 0; }
-          .benefits-grid { grid-template-columns: 1fr 1fr; gap: 8px; background: transparent; border: none; }
-          .benefit { border: 1px solid rgba(255,255,255,0.12); }
+          section { padding: 60px 0; }
+          .benefits-grid { grid-template-columns: 1fr 1fr; }
+          .sec-title { margin-bottom: 32px; }
         }
         @media (max-width: 540px) {
-          .benefits-grid { grid-template-columns: 1fr; gap: 12px; }
-          .sec-title { font-size: 42px; }
+          .benefits-grid { grid-template-columns: 1fr; }
+          .benefit { padding: 24px 20px; }
         }
       `}</style>
     </section>

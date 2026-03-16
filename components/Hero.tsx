@@ -8,7 +8,7 @@ const Hero = () => {
       <div className="hero-grid"></div>
       <div className="hero-glow"></div>
 
-      <div className="hero-inner">
+      <div className="hero-inner wrap">
         <div className="hero-eyebrow">Community — Open Access — 100% Free</div>
 
         <h1 className="hero-h1">
@@ -79,7 +79,7 @@ const Hero = () => {
           pointer-events: none;
         }
 
-        .hero-inner { position: relative; z-index: 2; max-width: 1100px; margin: 0 auto; width: 100%; }
+        .hero-inner { position: relative; z-index: 2; }
 
         .hero-eyebrow {
           font-family: var(--M);
@@ -207,23 +207,20 @@ const Hero = () => {
         .scroll-hint::after { content:''; display:block; width:1px; height:24px; background:rgba(255,255,255,0.25); }
 
         @media (max-width: 900px) {
-          .hero { padding: 100px 0 60px; }
-          .hero-h1 { font-size: clamp(48px, 12vw, 80px); }
-          .hero-sub { font-size: 14px; max-width: 100%; margin-top: 24px; padding-left: 14px; }
-          .hero-stats { max-width: 100%; margin-top: 56px; }
+          .hero { padding: 100px 0 60px; min-height: auto; }
+          .hero-h1 { font-size: 52px; }
+          .hero-sub { font-size: 13px; max-width: 100%; }
+          .hero-stats { max-width: 100%; }
+          .hero-actions { gap: 16px; }
+          .btn-primary, .btn-ghost { padding: 14px 24px; font-size: 9px; }
+          .scroll-hint { display: none; }
         }
         @media (max-width: 540px) {
-          .hero-h1 { font-size: clamp(40px, 14vw, 56px); }
+          .hero { padding: 90px 0 48px; }
+          .hero-h1 { font-size: 40px; }
+          .hero-eyebrow { font-size: 7px; letter-spacing: 3px; }
           .hero-stats { flex-wrap: wrap; }
-          .hstat { min-width: 45%; padding: 14px 10px; border-bottom: 1px solid rgba(255,255,255,0.14); }
-          .hstat:nth-child(2) { border-right: none; }
-          .hstat:nth-child(3) { border-bottom: none; }
-          .hstat:nth-child(4) { border-bottom: none; border-right: none; }
-          .hstat-n { font-size: 24px; }
-          .hstat-l { font-size: 6.5px; }
-
-          .hero-actions { flex-direction: column; align-items: stretch; gap: 12px; }
-          .btn-primary, .btn-ghost { text-align: center; }
+          .hstat { min-width: 45%; flex: none; }
         }
       `}</style>
     </section>
