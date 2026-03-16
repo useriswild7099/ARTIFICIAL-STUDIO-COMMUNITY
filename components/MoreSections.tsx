@@ -12,14 +12,13 @@ export const GroupsSection = () => {
     { name: 'Vibe Marketing', desc: 'AI-powered marketing systems and growth strategies for builders.', tag: 'Marketing' },
     { name: 'Business Syndicate', desc: 'Mastering Web3, modern business models, and high-leverage stock strategies.', tag: 'Wealth' },
     { name: 'Good Students', desc: 'Learn, discuss, debate and grow together — for serious learners.', tag: 'Learning' },
-    { name: 'Announcements', desc: 'Official drops, community updates and platform launches.', tag: 'Official' },
   ];
 
   return (
     <section className="groups-section" id="groups">
       <div className="wrap">
         <div className="sec-label">Active Groups Inside</div>
-        <h2 className="sec-title">10 Groups.<br /><span className="inv">One Ecosystem</span></h2>
+        <h2 className="sec-title">9 Groups.<br /><span className="inv">One Ecosystem</span></h2>
 
         <div className="groups-grid">
           {groups.map((g, i) => (
