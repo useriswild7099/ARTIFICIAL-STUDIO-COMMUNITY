@@ -82,3 +82,22 @@ body {
   60%      { transform: translateX(-4px); }
   80%      { transform: translateX(4px); }
 }
+
+/* ═══════════════════════════════════
+   RESPONSIVE / MOBILE OPTIMIZATION
+   ═══════════════════════════════════ */
+@media (max-width: 768px) {
+  body {
+    background-color: #000 !important;
+  }
+  
+  /* Hide heavy visual elements on mobile for performance/clutter */
+  .nebula-bg, .particles-container {
+    display: none !important;
+  }
+
+  .wrap {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

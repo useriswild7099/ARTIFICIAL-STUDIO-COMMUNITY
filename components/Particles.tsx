@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react'
 
-export default function Particles() {
+export default function Particles({ className }: { className?: string }) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
 
   useEffect(() => {
@@ -94,6 +94,7 @@ export default function Particles() {
   return (
     <canvas
       ref={canvasRef}
+      className={className}
       style={{
         position: 'fixed',
         top: 0,

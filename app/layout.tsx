@@ -22,7 +22,7 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Dela+Gothic+One&family=Manrope:wght@200..800&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
       </head>
       <body>
-        <div style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, zIndex: -2, backgroundColor: '#000' }}>
+        <div className="nebula-bg" style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, zIndex: -2, backgroundColor: '#000' }}>
           <Image 
             src="/nebula.jpg" 
             alt="Nebula background" 
@@ -33,7 +33,7 @@ export default function RootLayout({
           />
           <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.6))' }} />
         </div>
-        <Particles />
+        <Particles className="particles-container" />
         <StyledJsxRegistry>
           {children}
         </StyledJsxRegistry>
