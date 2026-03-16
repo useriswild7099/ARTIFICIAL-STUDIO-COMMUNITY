@@ -138,8 +138,7 @@ const JoinForm = () => {
               </form>
 
               <p className="form-note">
-                Redirecting to WhatsApp — no spam, no paywall — free forever<br />
-                artificialstudio.vercel.app
+                Redirecting to WhatsApp — no spam, no paywall — free forever
               </p>
             </div>
           </div>

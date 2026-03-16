@@ -109,7 +109,6 @@ export const Footer = () => {
       <div className="wrap" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '20px' }}>
         <div className="footer-logo">Artificial Studio</div>
         <div className="footer-copy">&copy; 2026 Artificial Studio. The Future Ecosystem.</div>
-        <a href="https://artificialstudio.vercel.app" className="footer-link" target="_blank">artificialstudio.vercel.app &rarr;</a>
       </div>
       <style jsx>{`
         footer { border-top: 1px solid rgba(255,255,255,0.1); padding: 40px 0; }
