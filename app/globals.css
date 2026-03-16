@@ -14,11 +14,11 @@
 html { scroll-behavior: smooth; }
 
 body {
-  background: var(--B);
+  background-color: var(--B);
   color: var(--W);
   font-family: var(--C);
-  overflow-x: hidden;
-  cursor: crosshair;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 }
 
 /* scrollbar */

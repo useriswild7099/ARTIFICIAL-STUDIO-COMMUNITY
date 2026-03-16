@@ -54,7 +54,7 @@ const Hero = () => {
           display: flex;
           flex-direction: column;
           justify-content: center;
-          padding: 140px 0 80px;
+          padding: 160px 0 100px;
           position: relative;
           overflow: hidden;
         }
