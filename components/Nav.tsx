@@ -91,14 +91,14 @@ const Nav = () => {
           display: flex; flex-direction: column; align-items: center; gap: 28px;
         }
         .mo-link {
-          font-family: var(--D); font-size: 28px; letter-spacing: 4px;
+          font-family: var(--D); font-size: 18px; letter-spacing: 3px;
           color: var(--W); text-decoration: none; text-transform: uppercase;
           opacity: 0.65; transition: opacity 0.2s;
         }
         .mo-link:hover, .mo-link:active { opacity: 1; }
         .mo-cta {
-          font-family: var(--M); font-size: 11px; letter-spacing: 4px;
-          color: var(--B); background: var(--W); padding: 14px 28px;
+          font-family: var(--M); font-size: 10px; letter-spacing: 3px;
+          color: var(--B); background: var(--W); padding: 12px 24px;
           text-decoration: none; text-transform: uppercase; margin-top: 8px;
         }
 
